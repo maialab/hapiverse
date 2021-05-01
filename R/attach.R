@@ -1,5 +1,18 @@
 core <- c("gwasrapidd", "quincunx")
 
+#' hapiverse packages
+#'
+#' This function returns the packages that are part of the hapiverse. Contrast
+#' with \code{\link[hapiverse]{hapiverse_dependencies}}, which returns all
+#' package dependencies.
+#'
+#' @return A character vector of the names of packages included in the hapiverse.
+#'
+#' @export
+hapiverse_packages <- function() {
+  core
+}
+
 core_unattached <- function() {
   search <- paste0("package:", core)
   core[!search %in% search()]

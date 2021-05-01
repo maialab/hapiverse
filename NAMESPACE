@@ -3,3 +3,4 @@
 S3method(print,hapiverse_conflicts)
 export(hapiverse_conflicts)
 export(hapiverse_dependencies)
+export(hapiverse_packages)

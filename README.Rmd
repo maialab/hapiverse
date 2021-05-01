@@ -1,0 +1,76 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# hapiverse
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The hapiverse is an ongoing effort to embrace a collection of packages that
+work together to provide programmatic access to the European Bioinformatics
+Institute (EMBL-EBI) REST API services, namely those related with human genetic
+variation and phenotypes. Currently, this meta-package provides easy
+installation and loading of two packages:
+
+- [gwasrapidd](https://github.com/ramiromagno/gwasrapidd) that provides access to the [GWAS Catalog](https://www.ebi.ac.uk/gwas/)
+- [quincunx](https://github.com/maialab/quincunx) that provides access to the [PGS Catalog](https://www.pgscatalog.org/)
+
+## Installation
+
+You can install the current version of hapiverse with:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("maialab/hapiverse")
+```
+
+## Usage
+
+After installing hapiverse, you also get [gwasrapidd](https://github.com/ramiromagno/gwasrapidd) and
+[quincunx](https://github.com/maialab/quincunx) installed.
+
+To load and attach concomitantly [gwasrapidd](https://github.com/ramiromagno/gwasrapidd) and
+[quincunx](https://github.com/maialab/quincunx) simply run:
+
+```{r}
+library(hapiverse)
+```
+
+During the attaching of hapiverse, you will get notified of those functions that have clashing names. Behind the scenes we use the package [conflicted](https://github.com/r-lib/conflicted) to avoid misuse of functions with the same name. In these cases you will be required to choose one of the functions by using the double colon operator (`::`).
+
+As an example, both gwasrapidd and quincunx provide a function named `get_traits()`. If you try to use it directly, R will throw an error and ask that you specify either `gwasrapidd::get_traits()` or `quincunx::get_traits()`.
+
+Trying to use `get_traits()` will return an error because of the ambiguity arising from the two definitions:
+
+```{r error=TRUE}
+get_traits()
+```
+Note that you can use the function `hapiverse_conflicts()` at any time to revise the list of clashing function names:
+
+```{r}
+hapiverse_conflicts()
+```
+
+If you specify the package name with the double colon operator (`::`), then the ambiguity is resolved and execution proceeds normally. Using `get_traits()` from gwasrapidd:
+
+```{r}
+gwasrapidd::get_traits(efo_id = 'EFO_0005537')
+```
+
+Or using `get_traits()` provided by quincunx:
+
+```{r}
+quincunx::get_traits(efo_id = 'EFO_0005537')
+```

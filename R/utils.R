@@ -24,13 +24,15 @@ text_col <- function(x) {
 
 }
 
-#' List all packages in the hapiverse
+#' List all package dependencies in the hapiverse
+#'
+#' This function lists all direct package dependencies of hapiverse.
 #'
 #' @param include_self Include hapiverse in the list?
 #' @export
 #' @examples
-#' hapiverse_packages()
-hapiverse_packages <- function(include_self = TRUE) {
+#' hapiverse_dependencies()
+hapiverse_dependencies <- function(include_self = TRUE) {
   raw <- utils::packageDescription("hapiverse")$Imports
   imports <- strsplit(raw, ",")[[1]]
   parsed <- gsub("^\\s+|\\s+$", "", imports)

@@ -20,7 +20,7 @@ hapiverse_conflicts <- function() {
 
   conflicts <- purrr::keep(objs, ~ length(.x) > 1)
 
-  tidy_names <- paste0("package:", hapiverse_packages())
+  tidy_names <- paste0("package:", hapiverse_dependencies())
   conflicts <- purrr::keep(conflicts, ~ any(.x %in% tidy_names))
 
   conflict_funs <- purrr::imap(conflicts, confirm_conflict)

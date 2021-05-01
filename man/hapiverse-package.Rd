@@ -23,7 +23,7 @@ Authors:
 
 Other contributors:
 \itemize{
-  \item Centre for Biomedical Research, University of Algarve [copyright holder, funder]
+  \item Center for Health Technology and Services Research (CINTESIS), University of Algarve [copyright holder, funder]
 }
 
 }

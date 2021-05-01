@@ -14,7 +14,7 @@ Authors@R: c(
     person(given = "Ana-Teresa", family = "Maia",
       email = "maia.anateresa@gmail.com", role = "aut", 
       comment = c(ORCID = "0000-0002-0454-9207")),
-    person("Centre for Biomedical Research, University of Algarve",
+    person("Center for Health Technology and Services Research (CINTESIS), University of Algarve",
     role = c("cph", "fnd"))
     )
 Description: The 'hapiverse' is a collection of packages that together

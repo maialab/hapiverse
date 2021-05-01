@@ -6,11 +6,12 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The hapiverse is an ongoing effort to embrace a collection of packages
-that work together to provide programmatic access to the European
-Bioinformatics Institute (EMBL-EBI) REST API services, namely those
-related with human genetic variation and phenotypes. Currently, this
-meta-package provides easy installation and loading of two packages:
+The hapiverse (human API universe) is an ongoing effort to embrace a
+collection of packages that work together to provide programmatic access
+to the European Bioinformatics Institute (EMBL-EBI) REST API services,
+namely those related with human genetic variation and phenotypes.
+Currently, this meta-package provides easy installation and loading of
+two packages:
 
 -   [gwasrapidd](https://github.com/ramiromagno/gwasrapidd) that
     provides access to the [GWAS Catalog](https://www.ebi.ac.uk/gwas/)

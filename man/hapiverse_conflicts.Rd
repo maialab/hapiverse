@@ -7,8 +7,10 @@
 hapiverse_conflicts()
 }
 \description{
-This function lists all the conflicts between packages in the hapiverse
-and other packages that you have loaded.
+Conflicts are namespace collisions (i.e. functions that have the same name,
+but are provided by different packages). This function lists all the
+conflicts between packages in the hapiverse and other packages that you have
+loaded.
 }
 \details{
 There are four conflicts that are deliberately ignored: \code{intersect},

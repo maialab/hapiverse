@@ -6,8 +6,8 @@
 \alias{hapiverse-package}
 \title{hapiverse: Easily Install and Load the 'hAPIverse'}
 \description{
-The 'hapiverse' is a collection of packages that together
-    work to provide programmatic access to the European Bioinformatics
+The 'hapiverse' is a collection of packages that work
+    together to provide programmatic access to the European Bioinformatics
     Institute (EMBL-EBI) REST API servers. Currently, this meta-package
     is designed to make it easy to install and load the gwasrapidd and
     quincunx packages <https://maialab.org/hapiverse>.

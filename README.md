@@ -6,11 +6,11 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The hapiverse (human API universe) is an ongoing effort to embrace a
-collection of R packages that work together to provide programmatic
-access to the European Bioinformatics Institute (EMBL-EBI) REST API
-services, namely those related with human genetic variation and
-phenotypes. Currently, this meta-package provides easy installation and
+The hapiverse (human API universe) is a metapackage whose goal is
+embrace a collection of R packages that work together to provide
+programmatic access to the European Bioinformatics Institute (EMBL-EBI)
+REST API services, namely those related with human genetic variation and
+phenotypes. Currently, the hapiverse provides easy installation and
 loading of two packages:
 
 -   [gwasrapidd](https://github.com/ramiromagno/gwasrapidd) that
@@ -27,11 +27,11 @@ You can install the current version of hapiverse with:
 remotes::install_github("maialab/hapiverse")
 ```
 
-## Usage
-
 After installing hapiverse, you also get
 [gwasrapidd](https://github.com/ramiromagno/gwasrapidd) and
 [quincunx](https://github.com/maialab/quincunx) installed.
+
+## Usage
 
 To load and attach concomitantly
 [gwasrapidd](https://github.com/ramiromagno/gwasrapidd) and
@@ -52,6 +52,8 @@ library(hapiverse)
 #> x quincunx::setequal()       masks gwasrapidd::setequal(), base::setequal()
 #> x quincunx::union()          masks gwasrapidd::union(), base::union()
 ```
+
+## Namespace collisions
 
 During the attaching of hapiverse, you will get notified of those
 functions that have clashing names. Behind the scenes we use the package
